@@ -1,0 +1,165 @@
+<html>
+<head>
+
+    
+
+        <link rel="stylesheet" href="firstcheck.css">
+            
+
+
+</head>  
+
+
+        <body>
+
+            <img src="C:\Users\songul\Desktop\first checkpoint\logo.png">
+              <center>
+
+                <h1>
+                  
+                    
+                  <p>Home</p>
+                <p>courses</p>
+                <p>contact</p> </h1> 
+                </center>
+                <center><font size="15"><p><B><h1>courses</h1></B></p></font>
+                <b1><p><h2>Feedback</h2></p></center></b1>
+                
+                
+                
+                  
+                  <center><br><button onclick="changebold()" >B</button>
+                    <button  onclick="changeitalic()">I</button>
+                    <button onclick="changeunder()" >underline</button>
+                  
+                
+                
+                
+                <select id="size" onchange="changesize(this)"> 
+                  
+                <option value="20px">20px</option> 
+                <option value="30px">30px</option>  
+                <option value="40px">40px</option> 
+                
+                
+                
+                </select>
+                
+                <select onclick="changefont(this)">
+                
+                <option> Arial</option>
+                <option> Verdana</option>
+                <option> Geneva</option>
+                  </select>
+                
+                  
+                  <br>
+                  
+                  <textarea style="width: 700px; height: 300px"  id="2" cols="69" rows="30"></textarea>
+                  
+                </center>
+                 
+                 
+                
+                
+                
+                
+                
+                   </body> 
+               
+                 <script> 
+                 
+                 function changeitalic(){
+
+                if(document.getElementById("2").style.fontStyle=="italic"){
+
+                  
+                  document.getElementById("2").style.fontStyle="normal";
+
+                 }
+                 else {
+                   document.getElementById("2").style.fontStyle="italic";
+                  }
+
+                }
+
+                function changebold(){
+
+
+                 
+                   if(document.getElementById("2").style.fontWeight=="bold"){
+
+                    document.getElementById("2").style.fontWeight="normal";
+
+                   }else{document.getElementById("2").style.fontWeight="bold";
+
+                     
+
+                   }}
+                
+                 
+                  
+
+                   function changeunder(){
+
+                  if(document.getElementById("2").style.textDecoration=="underline"){
+
+                    document.getElementById("2").style.textDecoration="normal";
+
+                  }else{
+
+                    document.getElementById("2").style.textDecoration="underline";
+                  }
+
+                   }
+
+
+                   function changesize(obj){
+
+                     //var x=document.getElementById("size").value;
+                     //document.getElementById("output").innerHTML=x;
+                   
+                    const newSize = obj.value;
+                    document.getElementById("2").style.fontSize = newSize;
+                    
+/*
+if(x=="20px"){
+                     x.changesize="normal";
+                     
+                     
+                    }else{x="20px";}
+                    
+                    if(x=="30px"){
+                      
+                      x.changesize="normal";
+                    }
+                    
+                    
+                    else{x="30px";
+                    
+                    
+                    
+                  }
+                  */
+                  
+                }
+                function changefont(font){
+                  var newFont=font.value;
+console.log(font.value);
+               document.getElementById("2").style.fontFamily=font.value;
+
+
+                }
+                
+                </script>
+                
+                
+
+
+                 
+                </html>
+
+
+
+
+
